@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Rasskey::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["lusis"]
-  s.email       = ["lusis.org+github.com@gmail.com"]
+  s.email       = ["lusis.org+rubygems.org@gmail.com"]
   s.homepage    = "http://github.com/lusis/rasskey"
   s.summary     = %q{Small Ruby Library for ASCII drawing}
   s.description = %q{Small Ruby Library for ASCII drawing}
