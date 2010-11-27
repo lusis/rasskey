@@ -77,3 +77,14 @@ You can also use it as a String method:
 	%                                 %
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+# TODO
+
+ * Tests
+ * Get attr\_accessors working for String helper
+ * Get LICENSE headers and rdoc in place
+ * Work on allowing multi-char glyphs
+ * Word-wrapping for text
+ * Other "shapes"
+ * Custom elements (like say captions)
+ * Draw links between shapes
+ * Some type of canvas and auto-positioning
