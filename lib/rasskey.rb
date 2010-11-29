@@ -1,2 +1,2 @@
-require 'lib/rasskey/extensions/string'
-require 'lib/rasskey/box'
+require 'rasskey/extensions/string'
+require 'rasskey/box'
