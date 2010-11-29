@@ -3,7 +3,7 @@
 RassKey provides a few simple ASCII helpers for Ruby. Since this is the first release, the current functionality is fairly limited:
 
  * RassKey::Box
- * String.to\_box helper
+ * String#to\_box helper
 
 ## RassKey::Box
 
@@ -47,7 +47,7 @@ These can either be set via an options hash passed to the _draw_ method or as se
 	*                                     *
 	***************************************
 
-## String.to\_box
+## String#to\_box
 
 You can also use it as a String method:
 
