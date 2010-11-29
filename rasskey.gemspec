@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rasskey}
-  s.version = "0.0.4"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["lusis"]
-  s.date = %q{2010-11-28}
+  s.date = %q{2010-11-29}
   s.description = %q{Small Ruby library for ASCII drawing}
   s.email = %q{lusis.org+rubygems.org@gmail.com}
   s.extra_rdoc_files = [
@@ -17,15 +17,25 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
+    ".document",
+    ".rspec",
     "Gemfile",
+    "Gemfile.lock",
+    "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
+    "features/rasskey.feature",
+    "features/step_definitions/rasskey_steps.rb",
+    "features/support/env.rb",
     "lib/rasskey.rb",
     "lib/rasskey/box.rb",
     "lib/rasskey/extensions/string.rb",
     "lib/rasskey/version.rb",
-    "rasskey.gemspec"
+    "rasskey.gemspec",
+    "spec/rasskey_box_spec.rb",
+    "spec/rasskey_string_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/lusis/rasskey}
   s.licenses = ["MIT"]
@@ -33,7 +43,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Small Ruby library for ASCII drawing}
   s.test_files = [
-    "spec/rasskey_spec.rb",
+    "spec/rasskey_box_spec.rb",
+    "spec/rasskey_string_spec.rb",
     "spec/spec_helper.rb"
   ]
 
