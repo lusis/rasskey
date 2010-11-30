@@ -10,7 +10,7 @@ module RassKey
     @default_length = 20
     @default_padding = 1
     @default_glyph = '-'
-    @default_orientation = "vertical"
+    @default_orientation = "horizontal"
 
     attr_accessor :line_length
     attr_accessor :padding
@@ -39,10 +39,19 @@ module RassKey
       line_text = "#{spacing}#{data}#{spacing}"
       begin
         content_line = "#{@glyph * ((@line_length - line_text.length)/2)}#{line_text}#{@glyph * ((@line_length - line_text.length)/2)}"
-        content_line
       rescue
         puts "line length must be larger to accomodate text"
       end
+      case @orientation
+        when "horizontal"
+          content_line
+        when "vertical"
+          self.vertical(content_line)
+      end
+    end
+
+    def vertical(data)
+      data.split(//).join("\n")
     end
 
   end

@@ -26,4 +26,9 @@ describe "Rasskey::Line" do
     line.line_length = 50
     line.draw("test").should == "=====================  test  ====================="
   end
+
+  it "should draw a vertical line" do
+    line = RassKey::Line.new :orientation => 'vertical', :glyph => '|'
+    line.draw('vertical').should == "|\n|\n|\n|\n|\n \nv\ne\nr\nt\ni\nc\na\nl\n \n|\n|\n|\n|\n|"
+  end
 end
