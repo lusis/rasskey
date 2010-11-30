@@ -5,7 +5,7 @@ describe "Rasskey::Line" do
     line = RassKey::Line.new
     line.padding.should == 1
     line.glyph.should == "-"
-    line.width.should == 20
+    line.line_length.should == 20
     line.instance_of?(RassKey::Line).should be_true
   end
 
@@ -15,7 +15,7 @@ describe "Rasskey::Line" do
   end
 
   it "should accept an option hash " do
-    line = RassKey::Line.new :padding => 2, :glyph => "=", :width => 50
+    line = RassKey::Line.new :padding => 2, :glyph => "=", :line_length => 50
     line.draw("test").should == "=====================  test  ====================="
   end
 
@@ -23,7 +23,7 @@ describe "Rasskey::Line" do
     line = RassKey::Line.new
     line.padding = 2
     line.glyph = "="
-    line.width = 50
+    line.line_length = 50
     line.draw("test").should == "=====================  test  ====================="
   end
 end

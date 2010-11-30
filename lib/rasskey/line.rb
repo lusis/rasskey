@@ -1,30 +1,34 @@
 module RassKey
   class Line
     class << self
-      attr_accessor :default_width
+      attr_accessor :default_length
       attr_accessor :default_padding
       attr_accessor :default_glyph
+      attr_accessor :default_orientation
     end
 
-    @default_width = 20
+    @default_length = 20
     @default_padding = 1
     @default_glyph = '-'
-    @default_caption = nil
+    @default_orientation = "vertical"
 
-    attr_accessor :width
+    attr_accessor :line_length
     attr_accessor :padding
     attr_accessor :glyph
+    attr_accessor :orientation
 
     def initialize(options = {})
       options = {
-        :width => RassKey::Line.default_width,
+        :line_length => RassKey::Line.default_length,
         :padding => RassKey::Line.default_padding,
-        :glyph => RassKey::Line.default_glyph
+        :glyph => RassKey::Line.default_glyph,
+        :orientation => RassKey::Line.default_orientation
       }.merge(options)
 
-      self.width = options[:width]
+      self.line_length = options[:line_length]
       self.padding = options[:padding]
       self.glyph = options[:glyph]
+      self.orientation = options[:orientation]
 
       super()
     end
@@ -34,10 +38,10 @@ module RassKey
       spacing = " " * @padding || " "
       line_text = "#{spacing}#{data}#{spacing}"
       begin
-        content_line = "#{@glyph * ((@width - line_text.length)/2)}#{line_text}#{@glyph * ((@width - line_text.length)/2)}"
+        content_line = "#{@glyph * ((@line_length - line_text.length)/2)}#{line_text}#{@glyph * ((@line_length - line_text.length)/2)}"
         content_line
       rescue
-        puts "Width must be larger to accomodate text"
+        puts "line length must be larger to accomodate text"
       end
     end
 
