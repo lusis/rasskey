@@ -47,6 +47,8 @@ module RassKey
           content_line
         when "vertical"
           self.vertical(content_line)
+        else
+          puts "unknown orientation. Should be vertical or horizontal"
       end
     end
 
