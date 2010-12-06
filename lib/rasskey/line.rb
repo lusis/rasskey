@@ -30,6 +30,7 @@ module RassKey
       self.glyph = options[:glyph]
       self.orientation = options[:orientation]
 
+      #create
       super()
     end
 

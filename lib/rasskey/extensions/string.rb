@@ -8,7 +8,7 @@ module RassKey #:nodoc:
     end
 
     def to_box(options = {})
-      RassKey::Box.new(options).draw(self)
+      RassKey::Box.new(self, options).draw
     end
   end
 end

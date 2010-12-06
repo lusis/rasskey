@@ -4,12 +4,14 @@ describe "Rasskey::String" do
 
   it "should draw the default box with text 'test'" do
     mystr = "test"
-    mystr.to_box.should == "********\n* test *\n********"
+    $stdout.should_receive(:puts).with("********\n* test *\n********")
+    mystr.to_box
   end
 
   it "should accept an option hash " do
     mystr = "test"
-    mystr.to_box({:padding => 10, :glyph => "#"}).should == "##########################\n#                        #\n#                        #\n#                        #\n#                        #\n#                        #\n#          test          #\n#                        #\n#                        #\n#                        #\n#                        #\n#                        #\n##########################"
+    $stdout.should_receive(:puts).with("##########################\n#                        #\n#                        #\n#                        #\n#                        #\n#                        #\n#          test          #\n#                        #\n#                        #\n#                        #\n#                        #\n#                        #\n##########################")
+    mystr.to_box({:padding => 10, :glyph => "#"})
   end
 
 end
